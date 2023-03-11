@@ -19,3 +19,14 @@
 // HTTP cookies (also called web cookies, Internet cookies, browser cookies, or simply cookies) are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user's web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user's device during a session.
 
 // Cookies serve useful and sometimes essential functions on the web. They enable web servers to store stateful information (such as items added in the shopping cart in an online store) on the user's device or to track the user's browsing activity (including clicking particular buttons, logging in, or recording which pages were visited in the past).[1] They can also be used to save for subsequent use information that the user previously entered into form fields, such as names, addresses, passwords, and payment card numbers.
+
+// ৪. local storage আর session storage এর মধ্যে তিনটা পার্থক্য লিখে ফেলো। ইংরেজিতে। (নিজের মতো করে লিখবে )
+
+// Local storage is useful for storing data that the user will need to access later, such as offline data. Session storage is similar to cookies, but the data is only stored for the current session. This means that the data will be deleted when the user closes the browser. 
+
+// Practice task for local storage (level-1), done.
+const objectName = {firstName: 'Abraham', lastName: 'linkon'};
+const objectNameConvert = JSON.stringify(objectName);
+
+localStorage.setItem('sssss', objectNameConvert)
+
