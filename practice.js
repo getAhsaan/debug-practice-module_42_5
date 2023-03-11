@@ -25,8 +25,9 @@
 // Local storage is useful for storing data that the user will need to access later, such as offline data. Session storage is similar to cookies, but the data is only stored for the current session. This means that the data will be deleted when the user closes the browser. 
 
 // Practice task for local storage (level-1), done.
-const objectName = {firstName: 'Abraham', lastName: 'linkon'};
-const objectNameConvert = JSON.stringify(objectName);
+// const objectName = {firstName: 'Abraham', lastName: 'linkon'};
+// const objectNameConvert = JSON.stringify(objectName);
+// console.log(objectNameConvert);
+// localStorage.setItem('sssss', objectNameConvert);
 
-localStorage.setItem('sssss', objectNameConvert)
-
+// Practice task for local storage (level-2), done.
