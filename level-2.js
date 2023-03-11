@@ -1,25 +1,32 @@
-let clicks = 0;
-const count = () => {
-    const countElement = document.getElementById("count")
-    countElement.innerText = ++clicks;
-    saveStoredCount(countElement)
-    showStoredCount(countElement.innerText);
+
+let count = 0;
+const addClick = () => {
+    document.getElementById('count').innerText = ++count;
+    saveCountToLS(count);
+    displayCountFromLS();
 }
 
-const getStoredCount = () => {
+const getCountFromLS = () => {
     let count = {};
-    const storedCount = localStorage.getItem('count');
-    if (storedCount) {
-        count = JSON.parse(storedCount);
+    const countStored = localStorage.getItem('count');
+    if (countStored) {
+        count = JSON.parse(countStored);
     }
     return count;
 }
 
-const saveStoredCount = (countElement) => {
-    localStorage.setItem('count', countElement.innerText)
+const saveCountToLS = count => {
+    const counts = getCountFromLS();
+    counts['count'] = count;
+    const sendCountToLS = JSON.stringify(counts);
+    localStorage.setItem('count', sendCountToLS)
 }
 
-const showStoredCount = () => {
-    const storedCount = getStoredCount();
-    // console.log(storedCount);
+const displayCountFromLS = () => {
+const storedCount = getCountFromLS();
+for(const countName in storedCount) {
+    const countNumber = storedCount[countName]
+    document.getElementById('count').innerText = countNumber;
 }
+}
+displayCountFromLS();
